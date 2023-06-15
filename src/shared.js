@@ -7,24 +7,28 @@ const toggleButton = document.querySelector('.toggle-button');
 
 selectPlanButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    modal.classList.add('open');
     backdrop.classList.add('open');
+    modal.classList.add('open');
   });
 });
 
-const hideModal = () => {
-  modal.classList.remove('open');
-  backdrop.classList.remove('open');
-};
-
 backdrop.addEventListener('click', () => {
+  backdrop.classList.remove('open');
   mobileNav.classList.remove('open');
-  hideModal();
+
+  if (modal) {
+    modal.classList.remove('open');
+  }
 });
 
-noButton.addEventListener('click', hideModal);
+if (noButton) {
+  noButton.addEventListener('click', () => {
+    backdrop.classList.remove('open');
+    modal.classList.remove('open');
+  });
+}
 
 toggleButton.addEventListener('click', () => {
-  mobileNav.classList.add('open');
   backdrop.classList.add('open');
+  mobileNav.classList.add('open');
 });
