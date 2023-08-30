@@ -52,12 +52,9 @@ main {
 .package__info {
   padding: 1rem;
   border: 1px solid #0e4f1f;
-  font-size: 1.3rem;
   color: #0e4f1f;
   background: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-style: italic;
+  font-size: 1.2rem;
 }
 
 .clearfix {
