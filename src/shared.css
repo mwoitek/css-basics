@@ -34,12 +34,9 @@ main {
   font-size: 0;
   padding: 0.5rem 1rem;
   z-index: 1;
-}
-
-.main-header > div {
-  display: inline-block;
-  font-size: 1rem;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .toggle-button {
@@ -68,13 +65,11 @@ main {
   color: #0e4f1f;
   text-decoration: none;
   font-weight: bold;
-  height: 2.5rem;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .main-header__brand img {
-  height: 100%;
+  height: 2.5rem;
+  vertical-align: middle;
 }
 
 .main-nav {
@@ -85,10 +80,10 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .main-nav__item {
-  display: inline-block;
   margin: 0 1rem;
 }
 
@@ -129,11 +124,8 @@ main {
   }
 
   .main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 40px);
     font-size: 1rem;
-    vertical-align: middle;
+    display: flex;
   }
 }
 
@@ -180,9 +172,12 @@ main {
   width: 90%;
   height: 100%;
   list-style: none;
-  margin: 10% auto;
+  margin: 0 auto;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile-nav__item {
